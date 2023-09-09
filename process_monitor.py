@@ -4,7 +4,7 @@ from datetime import datetime
 
 def get_process_info():
     try:
-        conn = mysql.connector.connect(user='root', password='Zion@2022', host='localhost', database='mysql')
+        conn = mysql.connector.connect(user='root', password='', host='localhost', database='mysql')
         cursor_conn = conn.cursor()
 
         for proc in psutil.process_iter(attrs=['pid', 'name', 'memory_info', 'num_threads', 'ppid', 'status', 'create_time']):
